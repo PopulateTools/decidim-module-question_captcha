@@ -1,0 +1,8 @@
+---
+en:
+  decidim:
+    devise:
+      registrations:
+        new:
+          captcha_legend: Security question
+          captcha_instructions: Fill your answer below
