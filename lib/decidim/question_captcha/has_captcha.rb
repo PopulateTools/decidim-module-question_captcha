@@ -21,6 +21,8 @@ module Decidim
                             questions: captcha_questions
 
         def perform_textcaptcha?
+          return if Rails.application.config.cache_store == :null_store
+
           Decidim::QuestionCaptcha.config.perform_textcaptcha
         end
 

@@ -21,6 +21,11 @@ And then execute:
 bundle
 ```
 
+For local development, a memory store must be set:
+```
+rails dev:cache
+```
+
 ## Contributing
 
 See [Decidim](https://github.com/decidim/decidim).

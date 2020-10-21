@@ -134,5 +134,17 @@ describe "Authentication", type: :system do
         expect(page).not_to have_content("You have signed up successfully")
       end
     end
+
+    context "when using :null_store" do
+      before do
+        allow(Rails.application.config).to receive(:cache_store).with(:null_store)
+      end
+
+      it "doesn't display a captcha field" do
+        find(".sign-up-link").click
+
+        expect(page).not_to have_field(:user_textcaptcha_answer)
+      end
+    end
   end
 end
