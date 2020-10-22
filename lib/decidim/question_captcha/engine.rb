@@ -16,7 +16,7 @@ module Decidim
       end
 
       initializer "decidim_question_captcha.assets" do |app|
-        app.config.assets.precompile += %w[decidim_question_captcha_manifest.js decidim_question_captcha_manifest.css]
+        app.config.assets.precompile += %w(decidim_question_captcha_manifest.js decidim_question_captcha_manifest.css)
       end
     end
   end

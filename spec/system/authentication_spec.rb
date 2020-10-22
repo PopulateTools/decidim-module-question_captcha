@@ -7,8 +7,8 @@ describe "Authentication", type: :system do
   let(:last_user) { Decidim::User.last }
   let(:questions) do
     {
-        en: [{ 'question' => '1+1', 'answers' => '2' }],
-        es: [{ 'question' => '2+1', 'answers' => '3' }]
+      en: [{ "question" => "1+1", "answers" => "2" }],
+      es: [{ "question" => "2+1", "answers" => "3" }]
     }
   end
 

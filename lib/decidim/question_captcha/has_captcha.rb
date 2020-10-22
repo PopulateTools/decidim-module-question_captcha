@@ -36,9 +36,8 @@ module Decidim
 
         private
 
-
         def questions
-          return unless textcaptcha_config[:questions].present?
+          return if textcaptcha_config[:questions].blank?
 
           textcaptcha_config[:questions][current_locale] || textcaptcha_config[:questions][default_locale]
         end
@@ -47,9 +46,9 @@ module Decidim
           return unless questions
 
           random_question = questions[rand(questions.size)].symbolize_keys!
-          answers = (random_question[:answers] || '').split(',').map! { |answer| safe_md5(answer) }
+          answers = (random_question[:answers] || "").split(",").map! { |answer| safe_md5(answer) }
 
-          { 'q' => random_question[:question], 'a' => answers } if random_question && answers.present?
+          { "q" => random_question[:question], "a" => answers } if random_question && answers.present?
         end
       end
     end

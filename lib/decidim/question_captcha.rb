@@ -14,18 +14,18 @@ module Decidim
 
     config_accessor :questions do
       {
-          en: [
-              { 'question' => '1+1', 'answers' => '2,two' },
-              { 'question' => 'The green hat is what color?', 'answers' => 'green' }
-          ],
-          es: [
-              { 'question' => '1+2', 'answers' => '3,tres' },
-              { 'question' => 'El sombrero verde es de qué color?', 'answers' => 'verde' }
-          ],
-          ca: [
-              { 'question' => '2+2', 'answers' => '4,quatre' },
-              { 'question' => 'El barret verd és de quin color?', 'answers' => 'verd' }
-          ]
+        en: [
+          { "question" => "1+1", "answers" => "2,two" },
+          { "question" => "The green hat is what color?", "answers" => "green" }
+        ],
+        es: [
+          { "question" => "1+2", "answers" => "3,tres" },
+          { "question" => "El sombrero verde es de qué color?", "answers" => "verde" }
+        ],
+        ca: [
+          { "question" => "2+2", "answers" => "4,quatre" },
+          { "question" => "El barret verd és de quin color?", "answers" => "verd" }
+        ]
       }
     end
 
