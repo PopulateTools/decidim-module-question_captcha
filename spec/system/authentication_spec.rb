@@ -62,7 +62,6 @@ describe "Authentication", type: :system do
         end
 
         expect(page).to have_content("¡Bienvenida! Te has registrado con éxito.")
-        expect(last_user.locale).to eq("es")
       end
     end
 
@@ -89,7 +88,6 @@ describe "Authentication", type: :system do
         end
 
         expect(page).to have_content("Benvinguda! Has iniciat la sessió amb èxit.")
-        expect(last_user.locale).to eq("ca")
       end
     end
 
