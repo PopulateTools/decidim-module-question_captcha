@@ -6,6 +6,7 @@ fr:
         new:
           captcha_legend: Question de sécurité
           captcha_instructions: Remplissez votre réponse dans le champ en bas
+          textcaptcha_answer: "Réponse TextCaptcha"
   activerecord:
     errors:
       models:
@@ -14,7 +15,4 @@ fr:
             textcaptcha_answer:
               incorrect: "est incorrect, essayez plutôt une autre question"
               expired: "n'a pas été soumise assez rapidement, essayez plutôt une autre question"
-    activemodel:
-      attributes:
-        comment:
-          textcaptcha_answer: "Réponse TextCaptcha"
+

@@ -1,0 +1,18 @@
+---
+en:
+  decidim:
+    devise:
+      registrations:
+        new:
+          captcha_legend: Pregunta de Seguridad
+          captcha_instructions: Complete su respuesta a continuación
+          textcaptcha_answer: "TextCaptcha answer"
+  activerecord:
+    errors:
+      models:
+        comment:
+          attributes:
+            textcaptcha_answer:
+              incorrect: "es incorrecta, intente con otra pregunta en su lugar"
+              expired: "no se envió con la suficiente rapidez, prueba con otra pregunta"
+

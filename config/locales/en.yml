@@ -6,6 +6,7 @@ en:
         new:
           captcha_legend: Security question
           captcha_instructions: Fill your answer below
+          textcaptcha_answer: "TextCaptcha answer"
   activerecord:
     errors:
       models:
@@ -14,7 +15,4 @@ en:
             textcaptcha_answer:
               incorrect: "is incorrect, try another question instead"
               expired: "was not submitted quickly enough, try another question instead"
-    activemodel:
-      attributes:
-        comment:
-          textcaptcha_answer: "TextCaptcha answer"
+
