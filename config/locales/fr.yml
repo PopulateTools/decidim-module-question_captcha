@@ -10,7 +10,7 @@ fr:
   activerecord:
     errors:
       models:
-        comment:
+        registration:
           attributes:
             textcaptcha_answer:
               incorrect: "est incorrect, essayez plutôt une autre question"
