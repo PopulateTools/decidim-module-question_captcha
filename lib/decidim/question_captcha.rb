@@ -28,7 +28,7 @@ module Decidim
           { "question" => "¿De qué color es el gato negro?", "answers" => "Negro,negro" },
           { "question" => "¿Cuál es el segundo color de la lista: idioma, gris, naranja?", "answers" => "Gris,gris" },
           { "question" => "¿De qué color es el caballo blanco de Enrique IV?", "answers" => "Blanco,blanco" },
-          { "question" => "Rosa, verde y codo: ¿cuántos colores en la lista?", "answers" => "Dos,dos,2" },
+          { "question" => "Rosa, verde y codo: ¿cuántos colores en la lista?", "answers" => "Dos,dos,2" }
         ],
         ca: [
           { "question" => "2+2", "answers" => "4,quatre" },
@@ -36,14 +36,14 @@ module Decidim
           { "question" => "De quin color és el gat negre?", "answers" => "Negre,negre" },
           { "question" => "Quin és el segon color de la llista: idioma, gris, taronja?", "answers" => "Gris,gris" },
           { "question" => "Quin és el nombre més gran entre els números següents: 18, cinc, quaranta, cent?", "answers" => "Cent,cent,100" },
-          { "question" => "Rosa, verd i colze: quants colors de la llista?", "answers" => "Dos,dos,2" },
+          { "question" => "Rosa, verd i colze: quants colors de la llista?", "answers" => "Dos,dos,2" }
         ],
         fr: [
           { "question" => "Quelle est la capitale de la France ?", "answers" => "Paris,paris" },
           { "question" => "De quelle couleur est le chat noir ?", "answers" => "Noir,noir" },
           { "question" => "Quelle est la seconde couleur de la liste : langue, gris, orange ?", "answers" => "Gris,gris" },
           { "question" => "Combien font 15 moins un ?", "answers" => "Quatorze,quatorze,14" },
-          { "question" => "Rose, vert et coude : combien de couleurs dans la liste ?", "answers" => "Deux,deux,2" },
+          { "question" => "Rose, vert et coude : combien de couleurs dans la liste ?", "answers" => "Deux,deux,2" }
         ]
       }
     end
