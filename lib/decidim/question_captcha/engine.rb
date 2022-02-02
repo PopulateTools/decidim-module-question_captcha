@@ -15,8 +15,8 @@ module Decidim
         # root to: "question_captcha#index"
       end
 
-      initializer "decidim_question_captcha.assets" do |app|
-        app.config.assets.precompile += %w(decidim_question_captcha_manifest.js decidim_question_captcha_manifest.css)
+      initializer "[module_name].webpacker.assets_path" do
+        Decidim.register_assets_path File.expand_path("app/packs", root)
       end
     end
   end

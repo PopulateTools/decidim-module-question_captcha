@@ -20,7 +20,11 @@ describe "Authentication", type: :system do
     { "q" => "¿Cuál es el color del caballo gris?", "a" => [Digest::MD5.hexdigest("gris")] }
   end
 
+  let(:cache_store) { :memory_store }
+
   before do
+    allow(Rails).to receive(:cache).and_return(ActiveSupport::Cache.lookup_store(cache_store))
+    Rails.cache.clear
     allow(Decidim::QuestionCaptcha.config).to receive(:questions).and_return(app_questions)
     switch_to_host(organization.host)
     visit decidim.root_path
@@ -83,9 +87,7 @@ describe "Authentication", type: :system do
       end
 
       context "when using :null_store" do
-        before do
-          allow(Rails.application.config).to receive(:cache_store).with(:null_store)
-        end
+        let(:cache_store) { :null_store }
 
         it "doesn't display a captcha field" do
           find(".sign-up-link").click
@@ -187,9 +189,7 @@ describe "Authentication", type: :system do
       end
 
       context "when using :null_store" do
-        before do
-          allow(Rails.application.config).to receive(:cache_store).with(:null_store)
-        end
+        let(:cache_store) { :null_store }
 
         it "doesn't display a captcha field" do
           find(".sign-up-link").click
@@ -207,14 +207,14 @@ describe "Authentication", type: :system do
 
     within ".new_user" do
       page.execute_script("$($('.new_user > div > input')[0]).val('Ima robot :D')") if robot
-      fill_in :user_email, with: "user@example.org"
-      fill_in :user_name, with: "Responsible Citizen"
-      fill_in :user_nickname, with: "responsible"
-      fill_in :user_password, with: "DfyvHn425mYAy2HL"
-      fill_in :user_password_confirmation, with: "DfyvHn425mYAy2HL"
-      fill_in :user_textcaptcha_answer, with: captcha_answer
-      check :user_tos_agreement
-      check :user_newsletter
+      fill_in :registration_user_email, with: "user@example.org"
+      fill_in :registration_user_name, with: "Responsible Citizen"
+      fill_in :registration_user_nickname, with: "responsible"
+      fill_in :registration_user_password, with: "DfyvHn425mYAy2HL"
+      fill_in :registration_user_password_confirmation, with: "DfyvHn425mYAy2HL"
+      fill_in :registration_user_textcaptcha_answer, with: captcha_answer
+      check :registration_user_tos_agreement
+      check :registration_user_newsletter
       find("*[type=submit]").click
     end
   end

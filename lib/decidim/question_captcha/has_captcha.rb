@@ -22,7 +22,7 @@ module Decidim
                             questions: captcha_questions
 
         def perform_textcaptcha?
-          return if Rails.application.config.cache_store == :null_store
+          return unless cache_enabled?
 
           Decidim::QuestionCaptcha.config.perform_textcaptcha
         end
@@ -36,6 +36,10 @@ module Decidim
         end
 
         private
+
+        def cache_enabled?
+          Rails.cache.class != ActiveSupport::Cache::NullStore
+        end
 
         def questions
           return if textcaptcha_config[:questions].blank?
